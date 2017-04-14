@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  <mapper namespace="com.mrzhao.dao.LoginDao">
+  	<resultMap type="com.mrzhao.entity.User" id="user">
+  		<result column="account" property="account" />
+  		<result column="name" property="name"/>
+  		<result column="passwd" property="passwd"/>
+  		<result column="phone" property="phone"/>
+  		<result column="ranks" property="ranks" jdbcType="INTEGER" javaType="Integer"/>
+  		<result column="nlevel" property="nlevel" jdbcType="INTEGER" javaType="Integer"/>
+  		<result column="isadmin" property="isAdmin"/>
+  		<result column="email" property="email"/>
+  	</resultMap>
+  	<select id="login" parameterType="com.mrzhao.entity.User" resultType="int">
+  		select count(*) from user_info t where t.account=#{account} and t.passwd=#{passwd}
+  	</select>
+  </mapper>

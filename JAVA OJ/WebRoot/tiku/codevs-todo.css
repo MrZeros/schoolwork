@@ -1,0 +1,157 @@
+.m-l-xxl {
+  margin-left: 40px;
+}
+.m-r-xxl {
+  margin-right: 30px;
+}
+.m-b-xl {
+  margin-bottom: 30px;
+}
+.m-b-xxl {
+  margin-bottom: 40px;
+}
+.m-t-xl {
+  margin-top: 30px;
+}
+.m-t-xxl {
+  margin-top: 40px;
+}
+
+.problem-status {
+  width: 10px;
+}
+
+.problem-id {
+  width: 30px;
+}
+
+.problem-score {
+  width: 30px;
+}
+
+.problem-level {
+  width: 95px;
+}
+
+.problem-accept {
+  width: 150px;
+}
+
+.captcha {
+  margin-top: 5px;
+}
+
+.run-status {
+  width: 180px;
+}
+
+.run-time {
+  width: 80px;
+}
+
+.run-memory {
+  width: 80px;
+}
+
+.run-popover {
+  width: 60px;
+}
+
+.run-score {
+  width: 60px;
+}
+
+.run-format {
+  width: 80px;
+}
+
+.run-codelength {
+  width: 80px;
+}
+
+.run-username {
+  width: 140px;
+}
+
+.run-datetime {
+  width: 150px;
+}
+
+.datetime {
+  width: 150px;
+}
+
+.username {
+  max-width: 120px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  margin: -4px;
+}
+
+.ellipsis {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.no-border-top td {
+  border-top:0px;
+}
+
+.no-border-top th {
+     border-top:0px;
+}
+
+.loading { width:16px;height:16px;background:url("/static/img/loading.gif") no-repeat;display:inline-block;vertical-align:middle; }
+.webkit .loading { background:url("/static/img/loading.svg") no-repeat; }
+
+.accepted {
+    display:inline-block;
+    background-image: url("/static/admin/img/icon-yes.gif");
+    background-repeat: no-repeat;
+    width:10px;
+    height:10px;
+    line-height:10px;
+}
+
+.submitted {
+    display:inline-block;
+    background-image: url("/static/admin/img/icon-no.gif");
+    background-repeat: no-repeat;
+    width:10px;
+    height:10px;
+    line-height:10px;
+}
+
+.modal form {
+    margin-bottom: 10px;
+}
+
+.btn-weibo {
+  color: #fff !important;
+  background-color: #d14233;
+  border-color: #d14233;
+}
+.btn-github {
+  color: #fff !important;
+  background-color: #2d3e50;
+  border-color: #2d3e50;
+}
+.btn-linkedin {
+  color: #fff !important;
+  background-color: #00529c;
+  border-color: #00529c;
+}
+.btn-qq {
+  color: #fff !important;
+  background-color: #3598dc;
+  border-color: #3598dc;
+}
+.btn-renren {
+  color: #fff !important;
+  background-color: #3598dc;
+  border-color: #3598dc;
+}

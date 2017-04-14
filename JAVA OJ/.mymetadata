@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="JAVA OJ"
+  id="myeclipse.1491630357336"
+  context-root="/JAVA OJ"
+  j2ee-spec="6.0"
+  archive="JAVA OJ.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
