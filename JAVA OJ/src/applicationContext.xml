@@ -30,11 +30,50 @@
     		<property name="dataSource" ref="ds" />  
      		<property name="configLocation" value="classpath:mybatis.xml"></property>  
  		</bean>  
+ 		<!-- 配置bean管理器 -->
+ 		<bean id="springTools" class="com.mrzhao.common.SpringTools" lazy-init="false"/>
+ 		<!-- 配置id生成器 -->
+ 		<bean id="idWorker" class="com.mrzhao.common.SnowflakeIdWorker">
+ 			<constructor-arg  index="0" value="0"/>
+ 			<constructor-arg index="1" value="0"/>
+ 		</bean>
+ 		<!-- json配置 -->
+ 		<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+	        <!-- 解决 HttpMediaTypeNotAcceptableException: Could not find acceptable representation -->
+	        <property name="supportedMediaTypes">
+	            <list>
+	                <value>text/html;charset=UTF-8</value>
+	            </list>
+	        </property>
+	    </bean>
  		<!-- 配置dao -->
 		 <bean id="userDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
 		     <property name="mapperInterface" value="com.mrzhao.dao.LoginDao"></property>  
 		     <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
 		 </bean>
-		 
-		   
+		  <bean id="probDao" class="org.mybatis.spring.mapper.MapperFactoryBean">  
+		     <property name="mapperInterface" value="com.mrzhao.dao.ProbDao"></property>  
+		     <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
+		 </bean>
+		 <bean id="userInfoDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+			<property name="mapperInterface" value="com.mrzhao.dao.UserInfoDao"></property>
+			<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		</bean>
+		<!-- 配置为多例 -->
+		 <bean id="compileDao" class="org.mybatis.spring.mapper.MapperFactoryBean" scope="prototype">
+			<property name="mapperInterface" value="com.mrzhao.dao.CompileDao"></property>
+			<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		</bean>
+		<!-- 配置为多例 -->
+		<bean id="probResDao" class="org.mybatis.spring.mapper.MapperFactoryBean" scope="prototype">
+			<property name="mapperInterface" value="com.mrzhao.dao.ProbResDao"></property>
+			<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		</bean>
+		 <!-- 配置为多例 -->
+		<bean id="runningRecordDao" class="org.mybatis.spring.mapper.MapperFactoryBean" >
+			<property name="mapperInterface" value="com.mrzhao.dao.RunningRecordDao"></property>
+			<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		</bean>  
+		<!-- 启动编译线程 -->
+		<bean id="startTask" class="com.mrzhao.compile.CompileManager" init-method="startTask"></bean>
 </beans>  

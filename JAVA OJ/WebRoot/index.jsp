@@ -75,19 +75,19 @@
 				</a>
 				<dl class="layui-nav-child">
                     <dd>
-                        <a href="javascript:;" data-url="personInfo.do?account=${user.account }">
+                        <a href="javascript:;" data-url="personInfo.html">
                             <i class="iconfont icon-geren1" data-icon='icon-geren1'></i>
                             <span>个人信息</span>
                         </a>
                     </dd>
                     <dd>
-                        <a href="javascript:;" data-url="changepwd.do?account=${user.account }">
+                        <a href="javascript:;" data-url="changepwd.html">
                             <i class="iconfont icon-iconfuzhi01" data-icon='icon-iconfuzhi01'></i>
                             <span>修改密码</span>
                         </a>
                     </dd>
                     <dd>
-                        <a href="javascript:;" data-url="runningLog.do">
+                        <a href="javascript:;" data-url="myloginfo.html">
                             <i class="iconfont icon-piliangicon" data-icon='icon-piliangicon'></i>
                             <span>日志信息</span>
                         </a>
@@ -103,7 +103,7 @@
 					</a>
 					    <dl class="layui-nav-child">
 					    	<dd>
-					    		<a href="javascript:;" data-url="userList.do">
+					    		<a href="javascript:;" data-url="${contextpath }/JAVA OJ/userList.do">
 					    		   <i class="iconfont icon-yonghu1" data-icon='icon-yonghu1'></i>
 					    		   <span>用户列表</span>
 					    		</a>
@@ -137,25 +137,25 @@
 					</a>
 					   <dl class="layui-nav-child">
 					   	   <dd>
-					    		<a href="javascript:;" data-url="problemsList.do">
+					    		<a href="javascript:;" data-url="problemsList.html">
 					    		   <i class="iconfont icon-lanmuguanli" data-icon='icon-lanmuguanli'></i>
 					    		   <span>所有题库</span>
 					    		</a>
 					    	</dd>
 					    	<dd>
-					    		<a href="javascript:;" data-url="problemsList.do">
+					    		<a href="javascript:;">
 					    		   <i class="iconfont icon-wenzhang2" data-icon='icon-wenzhang2'></i>
 					    		   <span>入门题库</span>
 					    		</a>
 					    	</dd>
 					    	<dd>
-					    		<a href="javascript:;" data-url="problemsList.do">
+					    		<a href="javascript:;">
 					    		   <i class="iconfont icon-icon1" data-icon='icon-icon1'></i>
 					    		   <span>普及题库</span>
 					    		</a>
 					    	</dd>
 					    	<dd>
-					    		<a href="javascript:;" data-url="problemsList.do">
+					    		<a href="javascript:;">
 					    		   <i class="iconfont icon-word" data-icon='icon-word'></i>
 					    		   <span>提高题库</span>
 					    		</a>
@@ -172,31 +172,31 @@
 					</a>
 					<dl class="layui-nav-child">
               <dd>
-             	   <a href="javascript:;" data-url="problemsList.do">
+             	   <a href="javascript:;">
           					<i class="iconfont icon-zhuti"  data-icon='icon-zhuti'></i>
           					<span>青铜</span>
            			 </a>
               </dd>
               <dd>
-             	   <a href="javascript:;" data-url="problemsList.do">
+             	   <a href="javascript:;">
           					<i class="iconfont icon-zhuti"  data-icon='icon-zhuti'></i>
           					<span>白银</span>
            			 </a>
               </dd>
               <dd>
-             	   <a href="javascript:;" data-url="problemsList.do">
+             	   <a href="javascript:;">
           					<i class="iconfont icon-zhuti"  data-icon='icon-zhuti'></i>
           					<span>黄金</span>
            			 </a>
               </dd>
               <dd>
-             	   <a href="javascript:;" data-url="problemsList.do">
+             	   <a href="javascript:;">
           					<i class="iconfont icon-zhuti"  data-icon='icon-zhuti'></i>
           					<span>钻石</span>
            			 </a>
               </dd>
                <dd>
-             	   <a href="javascript:;" data-url="problemsList.do">
+             	   <a href="javascript:;">
           					<i class="iconfont icon-zhuti"  data-icon='icon-zhuti'></i>
           					<span>大师</span>
            			 </a>
@@ -206,7 +206,7 @@
 				</li>
 				
 				<li class="layui-nav-item">
-					<a href="javascript:;"data-url="problemsList.do">
+					<a href="javascript:;">
 					   <i class="iconfont icon-shengchengbaogao" ></i>
 					   <span>在线考试</span>
 					   <em class="layui-nav-more"></em>
@@ -227,7 +227,7 @@
 			</ul>
 			<div class="layui-tab-content" style="min-height: 150px; ">
 				<div class="layui-tab-item layui-show" >
-					<iframe class="larry-iframe" data-id='0' src="allRepository.do"></iframe>
+					<iframe class="larry-iframe" data-id='0' src="${contextpath }/JAVA OJ/allRepository.do"></iframe>
 				</div>
 				
 			</div>

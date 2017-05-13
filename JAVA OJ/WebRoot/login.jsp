@@ -7,7 +7,7 @@
 	    <meta http-equiv="Content-Language" content="zh-cn">
    	 	<title>java在线评测</title>
     	<script type="text/javascript" src="./layui/layui.js"></script>
-    	<script type="text/javascript" src="./layui/jquery-1.6.js"></script>
+    	<script type="text/javascript" src="./easyui/jquery.min1.js"></script>
     	<link rel="stylesheet" type="text/css" href="./layui/css/layui.css"/>
 	    <style type="text/css">
 	        .layui-nav-tree .layui-nav-child a:hover { color: #fff; background: #4E5465; }
@@ -281,58 +281,30 @@
 		<h1>java在线评测系统</h1>
 		<form action="login.do" method="post" id="frm_login" class="layui-form layui-form-pane ">
 			<input type="hidden" name="uid" id="uid" value="">
-			<input class="txt-input txtpd" name="UserName" id="UserName" lay-verify="required" type="text">
-			<input id="Password" name="Password" class="txt-input txtpd" value="" lay-verify="required" type="password">
+			<input class="txt-input txtpd" name="UserName" id="UserName" lay-verify="UserName" type="text">
+			<input id="Password" name="Password" class="txt-input txtpd" value="" lay-verify="Password" type="password">
 			<button id="regSubmit" lay-submit="" lay-filter="adminlogin">登陆</button>
 		</form>
 	</div>
-	<script type="text/javascript">
-			$(function(){
-				$("#regSubmit").click(function(){
-					var id=$("#UserName").val();
-					if(id.length==0){
-						layui.use("layer", function(){
-						 	var layer = layui.layer;
-		 			 		layer.open({
-		 			 			content:'用户名不能为空',
-		 			 			skin:'layui-layer-lan',
-		 			 			closeBtn:0,
-		 			 			anim:4
-		 			 		});
-						});
-						return;
-					}
-					var passwd=$("#Password").val();
-					if(passwd.length==0){
-						layui.use("layer", function(){
-						 	var layer = layui.layer;
-		 			 		layer.open({
-		 			 			content:'用户名不能为空',
-		 			 			skin:'layui-layer-lan',
-		 			 			closeBtn:0,
-		 			 			anim:4
-		 			 		});
-						});
-						return;
-					}
-					$("#frm_login").submit();											
-					/*
-					$.ajax({
-						type:'post',
-						url:'login.do',
-						datatype:'json',
-						data:{'account':id,'passwd':passwd},
-						success:function(result){
-							window.location.href=result;
-						},
-						error:function(result){
-							console.log(result);
-						}
-					});
-					*/
-				});
-			});
-		</script>
+<script type="text/javascript">
+		layui.use(['form'], function(){  
+  			var form = layui.form();  
+		  //自定义验证规则  
+		  form.verify({  
+		        UserName: function(value){  
+		          if(value.length < 1){  
+		            return '账号不能为空';  
+		          }  
+		        }, Password: function(value){  
+		          if(value.length < 1){  
+		            return '密码不能为空';  
+		          }  
+		        } 
+		  });        
+	  //监听提交  
+	  form.on('submit("adminlogin")');
+});  
+</script>
 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>
